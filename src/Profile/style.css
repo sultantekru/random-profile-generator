@@ -39,8 +39,26 @@
     width: 80%;
     background-color: #186049;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
     background-color: #247158;
+}
+
+.loading-icon {
+    animation: spin 2s linear infinite;
+    color: var(--blue-light);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
