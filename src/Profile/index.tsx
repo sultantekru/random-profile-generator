@@ -36,7 +36,7 @@ export const Profile: React.FC = () => {
                 <h4>{phoneNumber}</h4>
             </div>
             <div className="btn-container">
-                <button className='btn' style={ {justifyContent: isLoading ? 'space-between' : 'center'} } onClick={generateProfile}>
+                <button disabled={isLoading} className='btn' style={{ justifyContent: isLoading ? 'space-between' : 'center', cursor: isLoading ? 'wait' : 'pointer' }} onClick={generateProfile}>
                     {isLoading && <div className='loading-icon'><SpinnerGap size={32} /></div>}
                     Generate Random Profile</button>
             </div>
